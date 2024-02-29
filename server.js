@@ -7,7 +7,7 @@ require('dotenv').config();
 const CREDENTIALS = require("./multi-lingual-415505-cfad90c7cffe.json");
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // For parsing JSON requests
 
