@@ -4,8 +4,7 @@ const cors = require('cors'); // Add CORS middleware
 const {Translate} = require('@google-cloud/translate').v2;
 require('dotenv').config();
 
-const CREDENTIALS = require("./multi-lingual-415505-cfad90c7cffe.json");
-
+const CREDENTIALS = JSON.parse(process.env.GOOGLE_CREDENTIALS); 
 const app = express();
 const port = process.env.PORT || 3001;
 app.use(cors()); // Enable CORS for all routes
